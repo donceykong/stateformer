@@ -13,7 +13,7 @@ If above does not work, try XPAD NEO.
 
 ## Hunter SE ROS 
 ### Install Dependencies
-- >> sudo apt-get install build-essential git cmake libasio-dev
+-- >> sudo apt-get install build-essential git cmake libasio-dev
 
 ### Enable gs_usb kernel module 
 - >> sudo modprobe gs_usb
