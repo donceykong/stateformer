@@ -1,5 +1,9 @@
 # StateFormer Packages
 
+This repository contains the ROS (noetic) packages used to gather data from the HunterSE vehicle (Frank) for StateFormer research.
+
+## Below Details all instructions for using the needed packages for the StateFormer research:
+
 - ## First to allow for wireless Xbox connectivity:
     - 1) >> sudo apt install sysfsutils
     - 2) >> sudo nano /etc/sysfs.conf
