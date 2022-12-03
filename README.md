@@ -1,4 +1,4 @@
-# StateFormer Packages
+# StateFormer Data Collection
 
 This repository contains the ROS (noetic) packages used to gather data from the HunterSE vehicle (Frank) for StateFormer research.
 
