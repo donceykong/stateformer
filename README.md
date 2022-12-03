@@ -9,11 +9,11 @@
 
     If above does not work, try XPAD NEO.
 
-## Install ROS Joy for comminicating with Xbox One controller
+- ## Install ROS Joy for comminicating with Xbox One controller
 
-## Hunter SE ROS 
-### Install Dependencies
-- >> sudo apt-get install build-essential git cmake libasio-dev
+- ## Hunter SE ROS 
+    - ### Install Dependencies
+        - >> sudo apt-get install build-essential git cmake libasio-dev
 
 ### Enable gs_usb kernel module 
 - >> sudo modprobe gs_usb
