@@ -14,6 +14,7 @@ This repository contains the ROS (noetic) packages used to gather data from the 
     If above does not work, try XPAD NEO.
 
 - ## Install ROS Joy for comminicating with Xbox One controller
+    - >> sudo apt-get install ros-noetic-joy
 
 - ## Add the files from src/ directory in this repository to src in your workspace. Remove the empty directories, as they will be sourced from further instructions below.
 
