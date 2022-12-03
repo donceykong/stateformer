@@ -5,9 +5,9 @@
     - 2) >> sudo nano /etc/sysfs.conf
     - 3) place the following at the end of the file. "/module/bluetooth/parameters/disable_ertm=1"
 
-Now you should be able to open bluetooth and connect to Xbox One controller.
+    Now you should be able to open bluetooth and connect to Xbox One controller.
 
-If above does not work, try XPAD NEO.
+    If above does not work, try XPAD NEO.
 
 ## Install ROS Joy for comminicating with Xbox One controller
 
