@@ -1,9 +1,9 @@
 # StateFormer Packages
 
 ## First to allow for wireless Xbox connectivity:
->> sudo apt install sysfsutils
->> sudo nano /etc/sysfs.conf
-place the following at the end of the file. "/module/bluetooth/parameters/disable_ertm=1"
+1) >> sudo apt install sysfsutils
+2) >> sudo nano /etc/sysfs.conf
+3) place the following at the end of the file. "/module/bluetooth/parameters/disable_ertm=1"
 
 Now you should be able to open bluetooth and connect to Xbox One controller.
 
@@ -13,20 +13,20 @@ If above does not work, try XPAD NEO.
 
 ## Hunter SE ROS 
 ### Install Dependencies
->> sudo apt-get install build-essential git cmake libasio-dev
+1) >> sudo apt-get install build-essential git cmake libasio-dev
 
 ### Enable gs_usb kernel module 
->> sudo modprobe gs_usb
+1) >> sudo modprobe gs_usb
 
 
-## Build workspace
->> cd ~/<your_ws>
->> catkin_make
->> source devel/setup.bash
+## Build and source your ROS workspace
+1) >> cd ~/<your_ws>
+2) >> catkin_make
+3) >> source devel/setup.bash
 
 ## Allow for USB-CAN Communication
 ### First time comminucating with Hunter SE
->> rosrun hunter_bringup setup_can2usb.bash
+- >> rosrun hunter_bringup setup_can2usb.bash
 
 ### After first time communicating with Hunter SE
 >> rosrun hunter_bringup bringup_can2usb.bash
