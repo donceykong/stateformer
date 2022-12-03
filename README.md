@@ -15,6 +15,8 @@ This repository contains the ROS (noetic) packages used to gather data from the 
 
 - ## Install ROS Joy for comminicating with Xbox One controller
 
+- ## Add the files from src/ directory in this repository to src in your workspace. Remove the empty directories, as they will be sourced from further instructions below.
+
 - ## Hunter SE ROS 
     - ### Install Dependencies
         - >> sudo apt-get install build-essential git cmake libasio-dev
