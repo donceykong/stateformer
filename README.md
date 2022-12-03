@@ -1,9 +1,9 @@
 # StateFormer Packages
 
-## First to allow for wireless Xbox connectivity:
-1) >> sudo apt install sysfsutils
-2) >> sudo nano /etc/sysfs.conf
-3) place the following at the end of the file. "/module/bluetooth/parameters/disable_ertm=1"
+- ## First to allow for wireless Xbox connectivity:
+    - 1) >> sudo apt install sysfsutils
+    - 2) >> sudo nano /etc/sysfs.conf
+    - 3) place the following at the end of the file. "/module/bluetooth/parameters/disable_ertm=1"
 
 Now you should be able to open bluetooth and connect to Xbox One controller.
 
@@ -13,7 +13,7 @@ If above does not work, try XPAD NEO.
 
 ## Hunter SE ROS 
 ### Install Dependencies
--- >> sudo apt-get install build-essential git cmake libasio-dev
+- >> sudo apt-get install build-essential git cmake libasio-dev
 
 ### Enable gs_usb kernel module 
 - >> sudo modprobe gs_usb
