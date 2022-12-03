@@ -1,0 +1,14 @@
+<launch>
+    <arg name="joy"  default="false"/>
+    <arg name="dev"  default="/dev/input/js0"/>
+
+    <node if="$(arg joy)" name="joy" pkg="joy" type="joy_node" required="true">
+        <param name="autorepeat_rate" value="50" />
+        <param name="dev" value="$(arg dev)" />
+    </node>
+
+    <node name="teleop_joy" pkg="learning_joy" type="teleop_joy.py" output="screen" required="true">
+        <param name="joy" value="true" />
+    	<param name="autorepeat_rate" value="50" />
+    </node>
+</launch>
