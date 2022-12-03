@@ -60,4 +60,52 @@ Now open a new terminal
 >> source devel/setup.bash
 
 ### Start Xbox One control node (Assuming your Xbox controller is still connected via Bluetooth)
->> roslaunch learning_joy teleop_joy_cpp.launch 
+>> roslaunch learning_joy teleop_joy_cpp.launch
+
+## Set up LORD IMU
+### Install driver for ROS
+>> sudo apt-get install ros-ROS_noetic-microstrain-inertial-driver
+
+### Install RQT for LORD IMU
+>> sudo apt-get install ros-ROS_noetic-microstrain-inertial-rqt
+
+### Run the IMU node:
+>> roslaunch microstrain_inertial_driver microstrain.launch
+
+### Read IMU values:
+>> rostopic echo /imu/data
+
+## Setup Ouster LiDAR
+### Install dependencies
+>> sudo apt install -y                  \
+    ros-noetic-pcl-ros             \
+    ros-noetic-rviz                \
+    ros-noetic-tf2-geometry-msgs
+
+### Install additional dependencies:
+>> sudo apt install -y \
+    build-essential \
+    libeigen3-dev   \
+    libjsoncpp-dev  \
+    libspdlog-dev   \
+    cmake
+
+### Install Package:
+>> cd ~/<your_ws>/src
+>> git clone --recurse-submodules https://github.com/ouster-lidar/ouster-ros.git
+
+### Compile the driver:
+>> cd ~/<your_ws>
+>> catkin_make --cmake-args -DCMAKE_BUILD_TYPE=Release -DBoost_LIBRARY_DIR_RELEASE=/usr/lib/x86_64-linux-gnu
+
+### Use in sensor mode:
+>> roslaunch ouster_ros sensor.launch      \
+    sensor_hostname:=<sensor host name>    \
+    metadata:=<json file name>             # metadata is optional
+
+### Use in replay mode:
+>> roslaunch ouster_ros replay.launch      \
+    metadata:=<json file name>          \
+    bag_file:=<path to rosbag file>
+
+
